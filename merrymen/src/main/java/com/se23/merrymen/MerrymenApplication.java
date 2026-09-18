@@ -8,6 +8,8 @@ public class MerrymenApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MerrymenApplication.class, args);
+
+
 	}
 
 }
