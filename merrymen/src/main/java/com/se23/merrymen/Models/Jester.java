@@ -1,22 +1,19 @@
 package com.se23.merrymen.Models;
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name = "jesters")
 public class Jester extends User{
 
-    private String role;
 
-    public Jester(String role, String username, String password, String dob, String country, String city){
-        super(username, password, dob, country, city);
-        this.role = role;
+
+    public Jester(String username, String password, LocalDate dob, String country, String city){
+        super(username, password, dob, country, city, Role.JESTER);
     }
 
-    public String getRole() {
-        return role;
-    }
+    public Jester(){} //no-args constructor - required by JPA
 
-    public void setRole(String role) {
-        this.role = role;
-    }
+
 }
